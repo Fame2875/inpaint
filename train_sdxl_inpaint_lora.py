@@ -11,13 +11,12 @@ from peft import get_peft_model, LoraConfig
 import wandb
 
 # ====== CONFIG ======
-IMG_DIR = r"C:\Users\Admin\Desktop\jupyter\YOLOandSAMTrackID\output_sam2_target_yolo_others\target_only"
-MASK_DIR = r"C:\Users\Admin\Desktop\jupyter\YOLOandSAMTrackID\output_sam2_target_yolo_others\diffusion_masks"
-
+IMG_DIR = "Data/target_only"
+MASK_DIR = "Data/diffusion_masks"
 BASE_MODEL = "diffusers/stable-diffusion-xl-1.0-inpainting-0.1"
 OUTPUT_DIR = "./lora_inpaint_sdxl_customloss_fixed2"
 BATCH_SIZE = 1
-EPOCHS = 10
+EPOCHS = 1
 LEARNING_RATE = 1e-5
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 IMAGE_SIZE = 512
